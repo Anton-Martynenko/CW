@@ -1,0 +1,8 @@
+const arr = (N) => {
+  const res = [];
+
+  for (let i = 0; i <= N - 1; i++) {
+   res.push(i);
+  }
+  return res;
+}
