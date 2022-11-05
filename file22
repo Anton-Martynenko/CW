@@ -1,0 +1,18 @@
+function basicOp(operation, value1, value2) {
+  let answer = "";
+  switch (operation) {
+      case "+":
+        answer = value1 + value2;
+        break;
+      case "-":
+        answer = value1 - value2;
+        break;
+      case "*":
+        answer = value1 * value2;
+        break;
+      case "/":
+        answer = value1 / value2;
+        break;
+  }
+  return answer;
+}
