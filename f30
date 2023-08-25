@@ -1,0 +1,10 @@
+var getMilitaryTime = function(input) {
+  let h = +input.slice(0, 2);
+  if (input[input.length - 2] === 'A') {
+    if (h > 12 ) h = h - 12;
+    if (h === 12) h = 0;
+  } else {
+    h === 12 ? h = 12 : h = h + 12;
+  }
+  return h < 10 ? `0${h}:${input.slice(3, -2)}` : `${h}:${input.slice(3, -2)}`
+};
