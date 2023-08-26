@@ -1,0 +1,10 @@
+function setReducer(input) {
+  while(input.length - 1) {
+    input = input.reduce((a,v,i) => {
+      if(v != input[i - 1]) a.push(1)
+      else a[a.length - 1]++
+      return a
+    }, [])
+  }
+  return input.pop()
+}
