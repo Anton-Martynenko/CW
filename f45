@@ -1,0 +1,16 @@
+function race(v1, v2, g) {
+  
+    if (v1 > v2) {
+      return null;
+    } else {
+      let result = [];
+      let time = g / ((v2 - v1) / 3600);
+      let h = Math.floor(time / 3600);
+      result.push(h);
+      let m = Math.floor((time - h * 3600) / 60);
+      result.push(m);
+      let s = Math.floor(time - h * 3600 - m * 60);
+      result.push(s);
+      return result;
+    }
+}
