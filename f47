@@ -1,0 +1,14 @@
+function twoSum(numbers, target) {
+    let arr = [];
+  for (let i = 0; i <= numbers.length; i++) {
+    for (let j = 1; j <= numbers.length; j++) {
+      if (target === numbers[i] + numbers[j]) {
+        arr.push(numbers.indexOf(numbers[i]))
+        if (numbers[i] === numbers[j]) {
+          arr.push(numbers.indexOf(numbers[j], numbers.indexOf(numbers[j]) + 1))
+        } else arr.push(numbers.indexOf(numbers[j]))
+      }
+    }
+  }
+  return arr;
+}
