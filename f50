@@ -1,0 +1,5 @@
+function presses(phrase) {
+  let symbol = "1*# ADGJMPTW0BEHKNQUXCFILORVY23456S8Z79";
+  let num = "111111111111222222222333333334444444455";
+  return [...phrase.toUpperCase()].reduce((a, b) => a + +num[symbol.indexOf(b)],0);
+}
