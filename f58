@@ -1,0 +1,3 @@
+function kebabize(str) {
+  return str.replace(/[^a-z]/ig, '').replace(/^[A-Z]/, l => l.toLowerCase()).replace(/[A-Z]/g, l => `-${l.toLowerCase()}`);
+}
