@@ -1,0 +1,6 @@
+function Mormons(startingNumber, reach, target) {
+  for (let i = 0;;i++){
+    if (startingNumber >= target) return i
+    startingNumber+= startingNumber * reach
+  }
+}
