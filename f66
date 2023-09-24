@@ -1,0 +1,8 @@
+function finance(n) {
+  let sum = 0;
+	let currentSum;
+	for (let i = 0; i <= n; i ++){ 
+		currentSum = (2 * i + 2 * i + (n - i)) * (n + 1 - i) / 2
+		sum += currentSum}
+	return sum;
+}
