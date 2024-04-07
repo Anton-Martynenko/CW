@@ -1,0 +1,12 @@
+function parse( data )
+{
+  const arr= [];
+  let score = 0;
+  data.split('').map(v => {
+  if (v === 'i'){score++}
+  if (v === 'd'){score--}
+  if (v === 's'){score = Math.pow(score,2)}
+  if (v === 'o'){arr.push(score)}
+  })
+  return arr;
+}
