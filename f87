@@ -1,0 +1,6 @@
+function calculateHypotenuse(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') throw new Error('Error')
+  if (isNaN(a) || isNaN(b)) throw new Error('Error')
+  if (a <= 0 || b <= 0) throw new Error('Error')
+  return +Math.hypot(a,b).toFixed(3)
+}
