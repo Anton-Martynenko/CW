@@ -1,0 +1,13 @@
+function oddRow(n) {
+  let first = 1;
+  for(let i = 1; i<n; i++){
+    first+=i*2
+  }
+
+  let r = [first];
+  for(let i = 1; i<n; i++){
+    r.push(first+=2)
+  }
+
+  return r
+}
