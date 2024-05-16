@@ -1,0 +1,8 @@
+function gettingMad(array) {
+    let diff;
+    array = array.sort((a,b) => a - b).reduce(function(acc, val, i, arr) {
+        diff = Math.abs(arr[i+1] - val);
+        return diff < acc ? diff : acc;
+    }, Infinity);
+    return array;
+}
