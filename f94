@@ -1,0 +1,11 @@
+function thueMorse(n){
+  let sequence = [0];
+  let previousSequenceLen = sequence.length;
+  while (sequence.length < n) {
+      previousSequenceLen = sequence.length;
+      for (let i = 0; i < previousSequenceLen; i++) {
+          sequence.push(sequence[i] === 0 ? 1 : 0);
+      }
+  }
+  return sequence.slice(0,n).join('');
+}
