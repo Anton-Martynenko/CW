@@ -1,0 +1,14 @@
+function myCrib(n) {
+  let house = [];
+  for (let i = 0; i < n; i++){
+    house.push(' '.repeat(n - i) + '/'+' '.repeat(i * 2) + '\\'+' '.repeat(n - i));
+  }
+  let underRoof = '/' + '_'.repeat(n * 2) + '\\';
+  house.push(underRoof);
+  for (let i = 0; i < n - 1; i++){
+    house.push('|' + ' '.repeat(n * 2) + '|');
+  }
+  let ground = '|' + '_'.repeat(n * 2) + '|';
+  house.push(ground);
+  return house.join`\n`;
+}
