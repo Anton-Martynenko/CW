@@ -1,0 +1,22 @@
+function checkeredBoard(dimension) {
+  const isEven = (number) => number % 2 === 0;
+  let oddRow = [];
+  let evenRow = [];
+  for (let i = 0; i < dimension; i++) {
+    if (isEven(dimension)) {
+      oddRow.push(isEven(i) ? '■' : '□')
+      evenRow.push(isEven(i) ? '□' : '■')
+    } else {
+      oddRow.push(isEven(i) ? '□' : '■')
+      evenRow.push(isEven(i) ? '■' : '□')
+    }
+  }
+  oddRow = oddRow.join(' ');
+  evenRow = evenRow.join(' ');
+  const board = [];
+  for (let i = 0; i < dimension; i++) {
+    board.push(isEven(i) ? evenRow : oddRow)
+  }
+
+  return board.join('\n')
+}
