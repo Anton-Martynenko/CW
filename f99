@@ -1,0 +1,11 @@
+function rot(strng) {    
+    return strng.slice().split('\n').reverse().map(v => v.split('').reverse().join(``)).join('\n');
+}
+function selfieAndRot(strng) {
+    let n = strng.slice().split('\n')[0].length;
+    let arr = strng.slice().split('\n').reverse().map(v => v.split('').reverse().join(``)).join(`\n${'.'.repeat(n)}`);    
+    return strng.slice().split('\n').join(`${'.'.repeat(n)}\n`) + `${'.'.repeat(n)}\n${'.'.repeat(n)}` + arr;
+}
+function oper(fct, s) {
+    return fct(s);
+}
