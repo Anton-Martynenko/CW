@@ -1,0 +1,15 @@
+var hungryFoxes = function(farm) {
+    let check = /(^[CF\.]*F+[CF\.]*\[)|(\][CF\.]*F+[CF\.]*\[)|(\][CF\.]*F+[CF\.]*$)/g;
+    let re = /^[CF\.]*\[|\][CF\.]*\[|\][CF\.]*$/g;        
+    let reCage = /\[[CF\.]*F+[CF\.]*\]/g;
+    let replacer = function(match) {
+        return match.replace(/C/g, '.');
+    };
+    if (!(/[\[\]]/g.test(farm))) {
+      return farm.replace(/.*F+.*/g, replacer);
+    }
+    if (check.test(farm)) {
+    farm = farm.replace(re, replacer);
+    }
+    return farm.replace(reCage, replacer);
+ }
