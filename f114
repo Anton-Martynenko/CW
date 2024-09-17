@@ -1,0 +1,27 @@
+function code(strng) {
+    let n = strng.split(''); 
+    let result = '';
+    n.forEach(x => {
+      let num = Number(x).toString(2);
+      num = '0'.repeat(num.length -1) + '1' + num;
+      result += num;
+    });
+    return result;
+}
+
+function decode(str) {
+    let arr = []; 
+    let result = "";
+    for (let i = 0; i < 10; i++)
+      arr.push(code(String(i)));
+    while (str.length !== 0) {
+      for (let i = 0; i < 10; i++) {
+        if (str.startsWith(arr[i])) {
+          result += String(i);
+          str = str.slice(arr[i].length);
+          break;
+        }
+      }
+    }
+   return result;
+}
