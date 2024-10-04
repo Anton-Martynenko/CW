@@ -1,0 +1,3 @@
+function parse(string) {
+  return string.split(' -> ').slice(0, -1).reduceRight((a, b) => new Node(Number(b), a), null);
+}
